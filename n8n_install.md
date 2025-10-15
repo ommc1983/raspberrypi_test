@@ -108,3 +108,34 @@ Para que n8n se ejecute en segundo plano de forma fiable y se inicie automática
       * Reiniciar n8n: `pm2 restart n8n`
 
 Con esto, tendrás **n8n** funcionando de forma continua en tu Raspberry Pi. ¡A automatizar\! 🚀
+
+## correccion de errores paso 5 (Opcional)
+
+PM2 no lograba guardar la configuracion con el siguiente error
+
+```
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/home/max/package.json'
+```
+
+```
+0. pm2 logs -> veras el log anterior
+1. which n8n -> encontrar la ubicacion
+2. cd /usr/bin -> en mi caso debi pararme sobre esta ubicacion
+3. pm2 start n8n -> responde con la ejecucion de un comando para modificar una variable de entorno
+4. sudo env PATH=$PATH:/home/max/.nvm/versions/node/v20.19.5/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u max --hp /home/max
+5. pm2 save
+6. pm2 status
+```
+
+## Imágenes de referencia
+
+A continuación se muestran imágenes que ilustran algunos de los pasos descritos:
+
+![Error en el status](imagenes/001_pm2_error.png)
+*Error en status.*
+
+![n8n / pm2 ok](imagenes/002_pm2_ok.png)
+*correccion despues de los pasos mencionados*
+
+![n8n en ejecución](imagenes/003.png)
+*Interfaz web de n8n ejecutándose en el navegador.*
