@@ -137,5 +137,5 @@ A continuación se muestran imágenes que ilustran algunos de los pasos descrito
 ![n8n / pm2 ok](imagenes/002_pm2_ok.png)
 *correccion despues de los pasos mencionados*
 
-![n8n en ejecución](imagenes/003.png)
+![n8n en ejecución](imagenes/003_n8n_browser.png)
 *Interfaz web de n8n ejecutándose en el navegador.*
