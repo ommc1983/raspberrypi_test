@@ -132,12 +132,15 @@ npm error enoent Could not read package.json: Error: ENOENT: no such file or dir
 A continuación se muestran imágenes que ilustran algunos de los pasos descritos:
 
 *Error en status.*
+
 ![Error en el status](imagenes/001_pm2_error.png)
 
 *correccion despues de los pasos mencionados*
+
 ![n8n / pm2 ok](imagenes/002_pm2_ok.png)
 
 *Interfaz web de n8n ejecutándose en el navegador.*
+
 ![n8n en ejecución](imagenes/003_n8n_browser.png)
 
 
@@ -166,7 +169,9 @@ If you prefer to disable this security feature (not recommended), set the enviro
 ```
 
 *ejecucion de comandos para corregir.*
+
 ![correccion cert](imagenes/004_n8n_cert_issue.png)
 
 *Interfaz web de n8n ejecutándose en el navegador dentro de la red.*
+
 ![correccion cert](imagenes/005_n8n_cert_ok.png)
