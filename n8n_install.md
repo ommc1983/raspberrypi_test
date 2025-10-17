@@ -109,7 +109,7 @@ Para que n8n se ejecute en segundo plano de forma fiable y se inicie automática
 
 Con esto, tendrás **n8n** funcionando de forma continua en tu Raspberry Pi. ¡A automatizar\! 🚀
 
-## 6\. Correccion de errores paso 5 (Opcional)
+## 6\. Correccion de errores paso 5
 
 PM2 no lograba guardar la configuracion con el siguiente error
 
@@ -141,7 +141,7 @@ A continuación se muestran imágenes que ilustran algunos de los pasos descrito
 *Interfaz web de n8n ejecutándose en el navegador.*
 
 
-## correccion error acceso por red
+## 7\. Correccion error acceso por red Interna
 
 Error
 ```
