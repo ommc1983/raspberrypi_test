@@ -109,7 +109,7 @@ Para que n8n se ejecute en segundo plano de forma fiable y se inicie automática
 
 Con esto, tendrás **n8n** funcionando de forma continua en tu Raspberry Pi. ¡A automatizar\! 🚀
 
-## correccion de errores paso 5 (Opcional)
+## 6\. Correccion de errores paso 5 (Opcional)
 
 PM2 no lograba guardar la configuracion con el siguiente error
 
@@ -139,3 +139,34 @@ A continuación se muestran imágenes que ilustran algunos de los pasos descrito
 
 ![n8n en ejecución](imagenes/003_n8n_browser.png)
 *Interfaz web de n8n ejecutándose en el navegador.*
+
+
+## correccion error acceso por red
+
+Error
+```
+Your n8n server is configured to use a secure cookie,
+however you are either visiting this via an insecure URL, or using Safari.
+
+To fix this, please consider the following options:
+Setup TLS/HTTPS (recommended), or
+If you are running this locally, and not using Safari, try using localhost instead
+If you prefer to disable this security feature (not recommended), set the environment variable N8N_SECURE_COOKIE to false
+
+```
+
+```
+0. cd /usr/bin
+1. pm2 stop n8n
+2. pm2 delete n8n
+3. N8N_SECURE_COOKIE=false pm2 start n8n
+4. pm2 save
+5. pm2 status
+
+```
+
+![correccion cert](imagenes/004_n8n_cert_issue.png)
+*ejecucion de comandos para corregir.*
+
+![correccion cert](imagenes/005_n8n_cert_ok.png)
+*Interfaz web de n8n ejecutándose en el navegador dentro de la red.*
